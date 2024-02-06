@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Register</title>
+        <link rel="stylesheet" href="register.css" />
+    </head>
+    <body>
+        <div class="topbar" id ="topbar">
+            <h1 id = "topbar-h1">FSS</h1>           
+           
+        </div>
+        <div class="container">
+            <form action="adminregister.php" method="post">
+                <input id ="id" name ="id"type="text" class="" placeholder="National ID" required>
+                <input id ="first_name" name ="first_name" type="text" class="" placeholder="First Name" required>
+                <input id ="last_name"name ="last_name" type="text" class="" placeholder="Last Name" required>
+                <input id ="email"name ="email" type="email" class="" placeholder="Email Address" required>
+                <input id ="phone_number" name ="phone_number" type="text" class="" placeholder="Phone Number" required>
+                <input id ="password" name ="password" type="password" class="" placeholder="Password" required>
+                <input id ="confirm_password" name="confirm_password" type="password" class="" placeholder="Confirm Password" required>
+                <button id = "register-btn" type="submit">Register</button>
+                          
+            </form>
+        </div>
+    </body>
+</html>
