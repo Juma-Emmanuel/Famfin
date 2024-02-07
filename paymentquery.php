@@ -22,7 +22,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssii", $month, $date, $amount, $userid);
 
 if ($stmt->execute()) {
-    echo "submittion succesfull.";
+    
     header("Location: paymentform.php");
 } else {
     echo $userid;
