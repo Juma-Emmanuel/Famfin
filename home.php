@@ -14,7 +14,7 @@ if (!isset($_SESSION["user_id"])) {
     <html lang="en">
     <head>
       <meta charset="UTF-8" />
-      <title>Jobs</title>
+      <title>FamFin Tracker</title>
       <link rel="stylesheet" href="style.css" />
       <script src="site.js"></script>     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -24,11 +24,11 @@ if (!isset($_SESSION["user_id"])) {
       <div class="container">
         <nav id="nav">
           <ul>
-            <li><a href="#" class="logo">              
+            <li class="logo">            
               
               <i class="fa-solid fa-user-tie"></i>
-              <span class="nav-item">Admin</span>
-            </a></li>
+            
+            </li>
             <li><a href="#" onclick="showSection('jobs')">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
@@ -44,7 +44,7 @@ if (!isset($_SESSION["user_id"])) {
           
            
     
-            <li><a href="#" class="logout">
+            <li><a href="logout.php" class="logout">
               <i class="fas fa-sign-out-alt"></i>
               <span class="nav-item">Log out</span>
             </a></li>
@@ -54,7 +54,8 @@ if (!isset($_SESSION["user_id"])) {
         <section class="main">
           <section class="section-display" id = "payments">
             <div class="topbar" id ="topbar">
-              <h1 id = "topbar-h1">FamFin Tracker</h1>
+            <img src="download.png" alt="">
+              <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>
               <div class="greeting">
                 <h1 class="">Hi, <?php echo $_SESSION["first_name"]; ?>!</h1>
               </div>
@@ -114,7 +115,8 @@ if (!isset($_SESSION["user_id"])) {
          
           <section class="section-display" id = "jobs">
             <div class="topbar" id ="topbar">
-              <h1 id = "topbar-h1">FamFin Tracker</h1>
+            <img src="download.png" alt="">
+              <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>
                           
               <div class="greeting">
               <h1 class="">Hi, <?php echo $_SESSION["first_name"]; ?>!</h1>
@@ -175,8 +177,7 @@ if (!isset($_SESSION["user_id"])) {
                 <th>LAST NAME</th>                            
                 <th>EMAIL</th>
                 <th>PHONE NUMBER</th>
-                <th>VIEW</th>
-                <th>ADD PAYMENT</th>
+                <th>VIEW</th>                
                 </tr>
                 </thead>';
 

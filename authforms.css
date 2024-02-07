@@ -14,22 +14,64 @@ body{
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 45px;
+    height: fit-content;
     margin-bottom: 20px;
+  }
+  .topbar img{
+    width: 63px;
   }
   .topbar h1{
     color: rgb(85, 83, 83);
-  }
-
+    margin-left: 10px;
+}
+.topbar span{
+  color: #4CAF50;
+}
 .container{
     /* width: 30%; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     background-color: white;
+}
+.container h1{
+    color: rgb(85, 83, 83);
+}
+#snackbar {
+    visibility: hidden; 
+    /* min-width: 250px; 
+    margin-left: -125px;  */
+    background-color: #FF909F; 
+    color: rgb(85, 83, 83);
+    font-weight: bold;
+    text-align: center; 
+    border-radius: 5px; 
+    padding: 10px; 
+    /* position: fixed;  */
+    z-index: 1; 
+    /* left: 50%;  */
+    /* bottom: 30px;  */
+}
+#snackbar.show,
+#success-snackbar.show {
+    visibility: visible;
+}
+#success-snackbar{
+    visibility: hidden; 
+    
+    background-color: #2ceb85; 
+    color: rgb(85, 83, 83);
+    font-weight: bold;
+    text-align: center; 
+    border-radius: 5px; 
+    padding: 10px; 
+    
+    z-index: 1; 
+   
 }
 form{
     display: flex;

@@ -1,29 +1,15 @@
 <?php
 
 
-$servername = "localhost";
-$username = "root";
-$password = "password";
-$database = "fss";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+require_once 'connection.php';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
-// Prepare and sanitize user input
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
-// Validate empty fields
-if (empty($email) || empty($password)) {
-    echo "Please fill in all required fields.";
-    exit;
-}
 
-// Select user data with prepared statement (secure against SQL injection)
+
+
 $sql = "SELECT * FROM users WHERE email = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $email);
@@ -47,10 +33,10 @@ if ($result->num_rows > 0) {
         header("Location: home.php");
         exit;
     } else {
-        echo "Invalid username or password.";
+        header("Location: login.html?error=Invalid%20username%20or%20password.");
     }
 } else {
-    echo "Invalid username or password.";
+    header("Location: login.html?error=Invalid%20username%20or%20password.");
 }
 
 $stmt->close();

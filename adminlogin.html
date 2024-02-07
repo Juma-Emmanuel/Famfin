@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Login</title>
+        <link rel="stylesheet" href="authforms.css" />
+    </head>
+    <body>
+        <div class="topbar" id ="topbar">
+            <img src="download.png" alt="">
+            <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>        
+           
+        </div>
+        <div class="container">
+            <h1>Log in to your account</h1>
+            <div id="snackbar"></div>
+            <div id="success-snackbar"></div>
+            <form action="adminlogin.php" method="post">             
+                <input id ="email" name ="email" type="email" class="" placeholder="Email Address" required>              
+                <input id ="password" name ="password" type="password" class="" placeholder="Password" required>               
+                <button id = "register-btn" type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

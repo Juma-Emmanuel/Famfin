@@ -4,25 +4,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Register</title>
-        <link rel="stylesheet" href="register.css" />
+        <link rel="stylesheet" href="authforms.css" />
+        <script src="showmessage.js"></script>
     </head>
     <body>
         <div class="topbar" id ="topbar">
-            <h1 id = "topbar-h1">FSS</h1>           
+            <img src="download.png" alt="">
+            <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>
            
         </div>
         <div class="container">
-            <form action="register.php" method="post">
+            <h1>Create an account</h1>
+            <div id="success-snackbar"></div>
+            <form action="register.php" method="post" onsubmit="validateForm()">
                 <input id ="id" name ="id"type="text" class="" placeholder="National ID" required>
                 <input id ="first_name" name ="first_name" type="text" class="" placeholder="First Name" required>
                 <input id ="last_name"name ="last_name" type="text" class="" placeholder="Last Name" required>
                 <input id ="email"name ="email" type="email" class="" placeholder="Email Address" required>
                 <input id ="phone_number" name ="phone_number" type="text" class="" placeholder="Phone Number" required>
                 <input id ="password" name ="password" type="password" class="" placeholder="Password" required>
-                <input id ="confirm_password" name="confirm_password" type="password" class="" placeholder="Confirm Password" required>
+                <input id ="confirm_password" name="confirm_password" type="password" class="" placeholder="Confirm Password" onchange="checkPasswordMatch()" required >
                 <button id = "register-btn" type="submit">Register</button>
                           
             </form>
         </div>
+        <script>
+           
+       function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_Password").value;
+            var error = document.getElementById("error");
+
+            
+            if (password !== confirmPassword) {
+                error.textContent = "Passwords do not match";
+                return false; 
+            } else {
+                error.textContent = ""; 
+            }
+            return true; 
+        }
+    
+        </script>
     </body>
 </html>

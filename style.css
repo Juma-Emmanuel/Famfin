@@ -32,6 +32,7 @@ nav:hover{
   text-align: center;
   display: flex;
   margin: 10px 0 0 10px;
+  padding: 10px;
   padding-bottom: 3rem;
 }
 
@@ -85,7 +86,7 @@ a:hover i{
   
 }
 
-/* MAin Section */
+
 .main{
   position: relative;
   
@@ -101,8 +102,15 @@ a:hover i{
   flex-direction: row;
   align-items: center;
 }
+.topbar img{
+  width: 63px;
+}
 .topbar h1{
   color: rgb(85, 83, 83);
+  margin-left: 10px;
+}
+.topbar span{
+  color: #4CAF50;
 }
 
 
@@ -120,16 +128,12 @@ a:hover i{
   width: fit-content;
 }
 .theme-button .dark{
-  background-color: rgb(226, 226, 226);
-  /* color: navy; */
+  background-color: rgb(226, 226, 226);  
   padding: 5px;
   border-radius: 5px;
   width: fit-content;
 }
-/* .theme-button .white i{
- 
-  font-size: 20px;
-} */
+
 .theme-button .dark i{
   color: rgb(18, 18, 46);
   font-size: 20px;

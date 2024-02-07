@@ -22,10 +22,10 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("isssss", $id, $first_name, $last_name, $email, $phone_number, $hashed_password);
 
 if ($stmt->execute()) {
-    header("Location: login.html?success=Registration%20successful!%20Please%20login%20to%20continue.");
+    header("Location: adminlogin.html?success=Registration%20successful!%20Please%20login%20to%20continue.");
 
 } else {
-    header("Location: register.html?error=error".$conn->error);
+    
     echo "Error: " . $conn->error;
 }
 

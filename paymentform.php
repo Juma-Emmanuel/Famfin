@@ -14,7 +14,8 @@ $id = $_GET["id"];
     </head>
     <body>
         <div class="topbar" id ="topbar">
-            <h1 id = "topbar-h1">FamFin Tracker</h1>           
+        <img src="download.png" alt="">
+              <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>          
            
         </div>
         <div class="container">

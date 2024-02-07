@@ -53,7 +53,7 @@
                 </thead>';
 
                 if ($result->num_rows > 0) {
-                  // Output data in a table
+                  
                   while($row = $result->fetch_assoc()) {
                   echo '<tbody> 
                   <tr>
@@ -82,6 +82,6 @@
                  
                   ?>
              </div>
-             <!-- </section> -->
+            
             </body>
             </html> 
