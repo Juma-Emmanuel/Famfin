@@ -158,7 +158,7 @@ a:hover i{
   display: none; 
   
 }
-#jobs {
+#home {
  
   display: flex; 
   flex-direction: column;
@@ -314,3 +314,43 @@ transform: scale(1.10);
     transition: 0.5rem;
     
   }
+
+  .section-display .container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;   
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.section-display .container h2{
+  color: rgb(110, 109, 109);
+}
+form .form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.form-group input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#emailForm button {
+    padding: 10px 20px;
+    background-color: #34AF6D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#emailForm button:hover {
+    background-color: #61ce94;
+}

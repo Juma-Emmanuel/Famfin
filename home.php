@@ -1,13 +1,13 @@
 <?php
 
-// Start session and check if logged in
-session_start();
-if (!isset($_SESSION["user_id"])) {
-    // header("Location: index.php");
-    exit;
-}
 
-// Secure content here (only accessible after successful login)
+// session_start();
+// if (!isset($_SESSION["user_id"])) {
+//     // header("Location: index.php");
+//     exit;
+// }
+
+
 
 ?>
 <span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
@@ -29,7 +29,7 @@ if (!isset($_SESSION["user_id"])) {
               <i class="fa-solid fa-user-tie"></i>
             
             </li>
-            <li><a href="#" onclick="showSection('jobs')">
+            <li><a href="#" onclick="showSection('home')">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a></li>
@@ -113,7 +113,7 @@ if (!isset($_SESSION["user_id"])) {
        
 
          
-          <section class="section-display" id = "jobs">
+          <section class="section-display" id = "home">
             <div class="topbar" id ="topbar">
             <img src="download.png" alt="">
               <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>

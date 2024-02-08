@@ -29,11 +29,11 @@
               <i class="fa-solid fa-user-tie"></i>
               <span class="nav-item">Admin</span>
             </li>
-            <li><a href="#" onclick="showSection('jobs')">
+            <li><a href="#" onclick="showSection('home')">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a></li>
-            <li><a href="#" onclick="showSection('payment-view')" >
+            <li><a href="#" onclick="showSection('message')" >
               <i class="fas fa-comment"></i>
               <span class="nav-item">Message</span>
             </a></li>
@@ -42,9 +42,10 @@
               <span class="nav-item">Payments</span>
             </a></li>
           
+          
            
     
-            <li><a href="#" class="logout">
+            <li><a href="adminlogout.php" class="logout">
               <i class="fas fa-sign-out-alt"></i>
               <span class="nav-item">Log out</span>
             </a></li>
@@ -54,7 +55,7 @@
         <section class="main">
           <section class="section-display" id = "payments">
             <div class="topbar" id ="topbar">
-            <img src="download.png" alt="">
+            <img src="logo.png" alt="">
             <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1> 
               <div class="greeting">
                 <h1 class="">Hi, <?php echo $_SESSION["first_name"]; ?>!</h1>
@@ -113,9 +114,9 @@
        
 
          
-          <section class="section-display" id = "jobs">
+          <section class="section-display" id = "home">
             <div class="topbar" id ="topbar">
-            <img src="download.png" alt="">
+            <img src="logo.png" alt="">
             <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1> 
                           
               <div class="greeting">
@@ -215,6 +216,32 @@
              </div>
 
           </section>
+          
+          <section class="section-display" id = "message">
+          <div class="topbar" id ="topbar">
+            <img src="logo.png" alt="">
+            <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1> 
+                          
+              <div class="greeting">
+              <h1 class="">Hi, <?php echo $_SESSION["first_name"]; ?>!</h1>
+              
+              </div>
+            </div>
+          <div class="container">
+    <h2>Send Reminder Email</h2>
+    <form id="emailForm">
+        <div class="form-group">
+            <label for="recipientEmail">Recipient's Email:</label>
+            <input type="email" id="recipientEmail" name="recipientEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Email</button>
+    </form>
+</div>
+            </section>
         
          </section>
     </body>
