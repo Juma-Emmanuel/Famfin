@@ -1,11 +1,11 @@
 <?php
 
 
-// session_start();
-// if (!isset($_SESSION["user_id"])) {
+session_start();
+if (!isset($_SESSION["user_id"])) {
     
-//     exit;
-// }
+    exit;
+}
 
 
 
@@ -19,6 +19,8 @@
       <script src="site.js"></script>     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="email.js"></script>  
     </head>
     <body id = "body">
       <div class="container">
@@ -42,8 +44,6 @@
               <span class="nav-item">Payments</span>
             </a></li>
           
-          
-           
     
             <li><a href="adminlogout.php" class="logout">
               <i class="fas fa-sign-out-alt"></i>
@@ -229,12 +229,24 @@
             </div>
           <div class="container">
     <h2>Send Reminder Email</h2>
+    <div id="success-response" class="success-response">
+                            <span id="success-message" class="success-message"></span>
+                        </div> 
+                        <div id="error-response" class="error-response">
+                            <span id="error-message" class="error-message"></span>
+                        </div>                       
     <form id="emailForm">
         <div class="form-group">
-            <label for="recipientEmail">Recipient's Email:</label>
-            <input type="email" id="recipientEmail" name="recipientEmail" required>
+        <label for="recipient">Senders Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="recipient">Recipient's Email:</label>
+            <input type="email" id="recipient" name="recipient" required>
         </div>
+        <label for="recipient">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
         <div class="form-group">
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         </div>

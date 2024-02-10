@@ -314,7 +314,7 @@ transform: scale(1.10);
     transition: 0.5rem;
     
   }
-
+/* email message */
   .section-display .container {
     max-width: 400px;
     margin: 0 auto;
@@ -353,4 +353,43 @@ form .form-group {
 }
 #emailForm button:hover {
     background-color: #61ce94;
+}
+.success-response{
+  display: none;
+  margin-bottom: 40px;
+  background-color: #1ca55c; 
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.success-message {
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight:800;
+}
+.success-response.show {
+  display: block;
+ 
+}
+
+.error-response{
+  display: none;
+  margin-bottom: 40px;
+  background-color: #a72312; 
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.error-message {
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight:800;
+}
+.error-response.show {
+  display: block;
+  
 }

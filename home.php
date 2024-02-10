@@ -1,11 +1,11 @@
 <?php
 
 
-// session_start();
-// if (!isset($_SESSION["user_id"])) {
-//     // header("Location: index.php");
-//     exit;
-// }
+session_start();
+if (!isset($_SESSION["user_id"])) {
+   
+    exit;
+}
 
 
 
@@ -33,10 +33,7 @@
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a></li>
-            <li><a href="#" onclick="showSection('payment-view')" >
-              <i class="fas fa-comment"></i>
-              <span class="nav-item">Message</span>
-            </a></li>
+           
             <li><a href="#"onclick="showSection('payments')" >
               <i class="fas fa-database"></i>
               <span class="nav-item">Payments</span>
@@ -54,7 +51,8 @@
         <section class="main">
           <section class="section-display" id = "payments">
             <div class="topbar" id ="topbar">
-            <img src="download.png" alt="">
+           
+            <img src="logo.png" alt="">
               <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>
               <div class="greeting">
                 <h1 class="">Hi, <?php echo $_SESSION["first_name"]; ?>!</h1>
@@ -115,7 +113,7 @@
          
           <section class="section-display" id = "home">
             <div class="topbar" id ="topbar">
-            <img src="download.png" alt="">
+            <img src="logo.png" alt="">
               <h1 id = "topbar-h1">FamFin <span>Tracker</span></h1>
                           
               <div class="greeting">
