@@ -6,7 +6,7 @@ require_once 'connection.php';
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
-$sql = "SELECT * FROM admins WHERE email = ?";
+$sql = "SELECT * FROM admin WHERE email = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $email);
 $stmt->execute();

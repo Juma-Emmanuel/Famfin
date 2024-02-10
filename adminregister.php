@@ -17,7 +17,7 @@ $confirm_password = $_POST["confirm_password"];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 
-$sql = "INSERT INTO users (id,first_name ,last_name, email,phone_number,password) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO admin (id,first_name ,last_name, email,phone_number,password) VALUES (?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("isssss", $id, $first_name, $last_name, $email, $phone_number, $hashed_password);
 
@@ -26,7 +26,7 @@ if ($stmt->execute()) {
 
 } else {
     
-    echo "Error: " . $conn->error;
+    header("Location: adminregister.html?error=error".$conn->error);
 }
 
 $stmt->close();
