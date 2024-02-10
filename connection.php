@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "1314";
+$password = "1334";
 $database = "famfin";
 
 

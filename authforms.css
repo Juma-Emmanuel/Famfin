@@ -27,8 +27,7 @@ body{
 .topbar span{
   color: #4CAF50;
 }
-.container{
-    /* width: 30%; */
+.container{    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 20px;
@@ -42,27 +41,21 @@ body{
     color: rgb(85, 83, 83);
 }
 #snackbar {
-    visibility: hidden; 
-    /* min-width: 250px; 
-    margin-left: -125px;  */
+    visibility: hidden;    
     background-color: #FF909F; 
     color: rgb(85, 83, 83);
     font-weight: bold;
     text-align: center; 
     border-radius: 5px; 
-    padding: 10px; 
-    /* position: fixed;  */
-    z-index: 1; 
-    /* left: 50%;  */
-    /* bottom: 30px;  */
+    padding: 10px;
+    z-index: 1;    
 }
 #snackbar.show,
 #success-snackbar.show {
     visibility: visible;
 }
 #success-snackbar{
-    visibility: hidden; 
-    
+    visibility: hidden;     
     background-color: #2ceb85; 
     color: rgb(85, 83, 83);
     font-weight: bold;
