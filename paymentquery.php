@@ -7,16 +7,6 @@ $month = $_POST["monthSelected"];
 $date = $_POST["date"];
 $amount = $_POST["amount"];
 
-
-
-
-if (empty($month) || empty($date) || empty($amount) ) {
-    echo "Please fill in all required fields.";
-    exit;
-}
-
-
-
 $sql = "INSERT INTO payments (month ,date,amount,userid) VALUES ( ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssii", $month, $date, $amount, $userid);
